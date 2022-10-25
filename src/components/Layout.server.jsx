@@ -1,4 +1,4 @@
-import {CacheLong, useShopQuery, Seo, Link} from "@shopify/hydrogen";
+import {CacheLong, Link, Seo, useShopQuery} from "@shopify/hydrogen";
 import {SHOP_QUERY} from "../query/query";
 import {Suspense} from "react";
 
@@ -11,8 +11,6 @@ export default function Layout({children}) {
     });
 
     const {data: {shop}} = data;
-
-    console.log(data)
 
     return (
         <>
