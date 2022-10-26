@@ -24,7 +24,7 @@ function ProductForm({product}) {
         setSelectedOption
     } = useProductOptions();
 
-    console.log(product)
+    const isOutOfStock = !selectedVariant?.availableForSale || false;
 
     return (
         <div>
@@ -67,6 +67,9 @@ function ProductForm({product}) {
                     );
                 })}
             </div>
+            <AddToCartButton className={'add-to-cart'} disabled={isOutOfStock}>
+                {isOutOfStock ? 'Out of stock' : 'Add to cart'}
+            </AddToCartButton>
             <div className={'product-description'} dangerouslySetInnerHTML={{ __html: product.descriptionHtml}}></div>
         </div>
     );
