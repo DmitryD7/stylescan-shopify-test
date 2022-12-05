@@ -5,7 +5,8 @@ export default function Home() {
     return (
         <Layout>
             <div className="home-page container">
-                <h1>Home page</h1>
+                <div className='home-page-gr'></div>
+                <h1>Welcome to StyleScan Store!</h1>
             </div>
         </Layout>
     );

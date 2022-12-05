@@ -2,6 +2,7 @@ import {CacheLong, Link, Seo, useShopQuery} from "@shopify/hydrogen";
 import {SHOP_QUERY} from "../query/query";
 import {Suspense} from "react";
 import CartBubble from "./CartBubble.client";
+import logo from "../assets/Black.png"
 
 export default function Layout({children}) {
 
@@ -25,12 +26,13 @@ export default function Layout({children}) {
             <header>
                 <div className="container header-inner ">
                     <Link to={'/'} className={'header-logo'}>
-                        {shop.name}
+                        {/*{shop.name}*/}
+                        <img src={logo} alt="logo"/>
                     </Link>
                     <ul className="header-navigation">
                         <li><a href="/catalog">Catalog</a></li>
-                        <li><a href="/collections/freestyle">Freestyle</a></li>
-                        <li><a href="#">Link 3</a></li>
+                        <li><a href="/collections/Tops">Tops</a></li>
+                        <li><a href="/collections/Dresses">Dresses</a></li>
                     </ul>
                     <Link to={'/cart'} className="header-cart-link">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}
